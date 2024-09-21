@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap');
 
+:root {
+  --font: "Open Sans", sans-serif;
+  --font-size: 18px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,14 +13,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000000;
   }
 
 hr {
     height: 3px;
-    color: gray;
     border: none;
-    background-color: #dbd7d7;
+    background-color: #000000;
 }
 
   .skranji-regular {
@@ -32,16 +35,16 @@ hr {
 
   .container {
     display: flex;
-    max-width: 1200px;
+    max-width: 1400px;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 1px 0px #000, 16px 5px 0px #dbccd4, 24px 24px 0px #f6f6f6;
     overflow: hidden;
     height: 100vh;
   }
 
   .image-container {
-    flex: 1.2;
-    background-image: url('https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    flex: 1.4;
+    background-image: url('/DALL·E\ 2024-09-21\ 12.53.19\ -\ A\ retro-style\ artwork\ of\ a\ vintage\ personal\ computer\ from\ the\ 1980s\,\ featuring\ a\ bulky\ CRT\ monitor\,\ large\ floppy\ disk\ drive\,\ and\ mechanical\ keyboard.\ .webp');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -79,6 +82,7 @@ hr {
   .form-container h2 {
     color: #333;
     margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
   }
 
   .form-container ul {
@@ -97,9 +101,11 @@ hr {
 
   .form-container label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
+    font-family: var(--font);
+    letter-spacing: .2rem;
+    font-size: 12px;
+    margin-bottom: 3px;
+    }
 
   .form-container input {
     width: 90%;
@@ -112,17 +118,60 @@ hr {
     text-align: left;
   }
 
-  .form-container button {
-    padding: 10px 20px;
-    background-color: #208404;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  .button-54 {
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     margin-top: 20px;
   }
 
-  .form-container button:hover {
-    background-color: #229403;
+  .button-54:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+
+  @media (min-width: 768px) {
+    .button-54 {
+      padding: 0.25em 0.75em;
+    }
+  }
+
+  input:valid {
+    border-color: #f89fd4;
+  }
+
+  input:invalid {
+    border-color: #ff0000;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #4f95b2;
+  }
+
+  .login-text {
+    font-family: var(--font);
+    font-size: var(--font-size);
+  }
+
+  .login-shadow {
+    color: #ff99cc;
+    font-weight: bold;
+    /* text-shadow: 3px 3px 0px #ff99cc; */
+  }
+
+  form > h2 {
+    margin-top: 6rem;
   }
